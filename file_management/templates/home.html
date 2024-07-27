@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    </style>
+</head>
+<style>
+    body{
+        background-color: #e3f6f5;
+        height: 100vh;
+        font-family: "Open Sans", sans-serif;
+        text-align: center;
+    }
+    h2{
+        font-size: 50px;
+        color: #272343;
+    }
+    p{
+        font-size: 30px;
+        color: #2d334a;
+    }
+    form{
+        width: 30%;
+        text-align: center;
+        margin: auto;
+        height: 40%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        font-weight: 100;
+        background-color: #272343;
+        border: none;
+        color: #fffffe;
+        border-radius: 20px;
+        text-align: center;
+        margin: auto;
+    }
+  
+.custom-file-upload {
+    border: 1px solid #ccc;
+    background-color: #fffffe;
+    font-size: 20px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+</style>
+<body>
+   
+    <h2>File Uploader</h2>
+    <p>Hello everyone!!Here you can Upload your files</p>
+    
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label class="custom-file-upload">
+            <input type="file" name="file">
+          
+        </label>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
